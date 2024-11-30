@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LT測定</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script>
+	
+	function calculateAll(){
+		maxHeartCalculate();
+		heartCalculate();
+	}
+	//最大心拍数から５３％の数字を計算
+	function maxHeartCalculate(){
+		const maxHeart = parseFloat(document.getElementById("maxHeart").value) || 0; // 数値に変換し空なら0
+		const halfRate = Math.floor(maxHeart*0.53);//53%の計算
+		document.getElementById("halfRate").value = halfRate;
+
+	}
+ 	
+	function heartCalculate(){
+		const maxHeart =parseFloat(document.getElementById("maxHeart").value);
+		const HeartRateI = maxHeart -10; //maxHeart -10を計算
+		document.getElementById("HeartRateI").value = HeartRateI;
+	}
+	</script>
+	
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form>
+    <label for="maxHeart">最大心拍数</label>
+    <input value="${maxHeart}" type="number" id="maxHeart" name="maxHeart" oninput="calculateAll()">
+    <br><br>
+	
+	<label for="halfRate">53%の心拍数</label>
+<!--	計算結果表示-->
+<input th:value="${halfHeart}" type ="number" id= "halfRate" name="halfRate" readonly>
+	<br>
+<table border="1">
+	<tr>
+	<th>指定心拍数</th>
+	<th>53%の心拍数に戻るまでの時間</th>
+	
+   	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateA}" type ="number" id= "HeartRateA" name="HeartRateA" readonly></td>
+	<td><input th:value="${TimeValueA}" type="number"id ="TimeValueA" name="TimeValueA"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateB}" type ="number" id= "HeartRateB" name="HeartRateB" readonly></td>
+	<td><input th:value="${TimeValueB}" type="number"id ="TimeValueB" name="TimeValueB"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateC}" type ="number" id= "HeartRateC" name="HeartRateC" readonly></td>
+	<td><input th:value="${TimeValueC}" type="number"id ="TimeValueC" name="TimeValueC"></td>
+	</tr></tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateD}" type ="number" id= "HeartRateD" name="HeartRateD" readonly></td>
+	<td><input th:value="${TimeValueD}" type="number"id ="TimeValueD" name="TimeValueD"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateE}" type ="number" id= "HeartRateE" name="HeartRateE" readonly></td>
+	<td><input th:value="${TimeValueE}" type="number"id ="TimeValueE" name="TimeValueE"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateF}" type ="number" id= "HeartRateF" name="HeartRateF" readonly></td>
+	<td><input th:value="${TimeValueF}" type="number"id ="TimeValueF" name="TimeValueF"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateG}" type ="number" id= "HeartRateG" name="HeartRateG" readonly></td>
+	<td><input th:value="${TimeValueG}" type="number"id ="TimeValueG" name="TimeValueG"></td>
+	</tr>
+	
+	<tr>	
+	<td><input th:value="${HeartRateH}" type ="number" id= "HeartRateH" name="HeartRateH"   readonly></td>
+	<td><input th:value="${TimeValueH}" type="number"id ="TimeValueH" name="TimeValueH"></td>
+	</tr>
+	
+	<tr>
+	<td><input th:value="${HeartRateI}" type ="number" id= "HeartRateI" name="HeartRateI" readonly></td>
+	<td><input th:value="${TimeValueI}" type="number"id ="TimeValueI" name="TimeValueI"></td>
+	</tr>
+</table>
+	</form>	
+</body>
+</html>
