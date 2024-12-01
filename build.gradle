@@ -44,6 +44,8 @@ dependencies {
 	 implementation 'org.springframework.boot:spring-boot-starter-security'
 	 
 	
+	//H２データベースをテストに利用
+	 testImplementation 'com.h2database:h2'
 }
 
 tasks.named('test') {

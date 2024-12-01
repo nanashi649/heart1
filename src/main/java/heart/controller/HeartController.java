@@ -9,4 +9,5 @@ public class HeartController {
 	public String maxHeart() {
 		return "MaxHeartRate";
 	}
+	
 }
