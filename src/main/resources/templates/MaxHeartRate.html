@@ -4,12 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LT測定</title>
-<!-- 外部JavaScriptファイルを読み込む -->
- 	<script src="MaxHeartRate.js" defer></script>
-<!--	Jquery(JavaScriptのライブラリで、HTMLの操作やイベント処理、アニメーション、Ajaxリクエストなどを簡単に実装する)を読み込む-->
-	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--	Chart.js（グラフ描写ツール）を読み込む-->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>	
+
+
+<script>
+	
+	function calculateAll(){
+		maxHeartCalculate();
+		heartCalculate();
+		updateHeartRates();
+		updateChart()
+	}
+	//最大心拍数から５３％の数字を計算
+	function maxHeartCalculate(){
+		const maxHeart = parseFloat(document.getElementById("maxHeart").value) || 0; // 数値に変換し空なら0
+		const halfRate = Math.floor(maxHeart*0.53);//53%の計算
+		document.getElementById("halfRate").value = halfRate;
+
+	}
+ 	
+	function heartCalculate(){
+		const maxHeart =parseFloat(document.getElementById("maxHeart").value);
+		const HeartRateI = maxHeart -10; //maxHeart -10を計算
+		document.getElementById("HeartRateI").value = HeartRateI;
+	}
+	
+	function updateHeartRates(){
+		const heartRateI = parseFloat(document.getElementById('HeartRateI').value)||0
+		
+		//HeartRateH~Aの計算
+		let heartRateIds = ['HeartRateH','HeartRateG','HeartRateF',
+		'HeartRateE','HeartRateD','HeartRateC','HeartRateB','HeartRateA']
+		
+		let currentValue = heartRateI;
+		for(const id of heartRateIds){
+			currentValue -= 10;
+			document.getElementById(id).value = currentValue;
+		}
+	}
+	
+	//グラフ用データの作成
+		function updateChart(){
+			const heartRates = [];
+			const timeValues = [];
+			
+			//HeartRateA~heartRateIを取得
+			const heartRateIds = ['HeartRateA','HeartRateB','HeartRateC', 'HeartRateD',
+			 					'HeartRateE', 'HeartRateF', 'HeartRateG', 'HeartRateH', 'HeartRateI'];
+			const timeValueIds = ['TimeValueA', 'TimeValueB', 'TimeValueC', 'TimeValueD',
+								'TimeValueE', 'TimeValueF', 'TimeValueG', 'TimeValueH', 'TimeValueI'];
+			for(let i = 0; i <heartRateIds.length;i++){
+				const hr = parseFloat(document.getElementById(heartRateIds[i]).value) ||0;
+				const tv = parseFloat(document.getElementById(timeValueIds[i]).value) ||0;
+				heartRates.push(hr);
+				timeValues.push(tv);
+			}
+			// heartRates と timeValues から、Chart.jsで使用できるデータに変換（新しい配列を作る）		
+			const scatterData = heartRates.map((hr, index) => ({
+			    x: hr,
+				y: timeValues[index]
+			}));
+			// グラフデータを更新
+			            if (window.mychart) {
+			                window.mychart.data.datasets[0].data = scatterData;
+			                window.mychart.update(); // グラフを再描画
+			            }
+			        }
+
+			
+	</script>
+	
 </head>
 <body>
     <form>
@@ -74,9 +137,71 @@
 	</tr>
 </table>
 	</form>	
+
+	
+		
 <!--	グラフを挿入-->
 	<div style ="width: 600px;">
 		<canvas id ="chart" width="600" height="300"></canvas>
 	</div>	
+<!--	Jquery(JavaScriptのライブラリで、HTMLの操作やイベント処理、アニメーション、Ajaxリクエストなどを簡単に実装する)を読み込む-->
+	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--	Chart.js（グラフ描写ツール）を読み込む-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+//		chartを検索し変数に入れる
+		const ctx = document.getElementById('chart').getContext('2d');
+		
+		window.mychart = new Chart(ctx,{
+			type:'scatter',
+			data:{
+				datasets:[{
+					label:'LT値測定',
+					data:[],
+					backgroundColor: 'rgba(75, 192, 192, 0.2)',
+					borderColor: 'rgba(75, 192, 192, 1)',
+					borderWidth: 1
+				}]
+			},
+			options:{
+//				反応するように
+				responsive: true,
+				scales:{
+					x:{
+						type:'linear',
+						min:60,
+						max:220,
+						ticks:{
+							stepSize:20,//メモリの間隔を20
+							callback: function(value) {
+						 return value + ' 回'; // ラベルに「bpm」を追加
+						 }
+						},
+						title:{
+							display:true,
+							text:'指定心拍数(回)'
+						}
+					},
+					y:{
+						beginAtZero:true,//０からスタート
+						min: 0,
+						max: 200,
+						ticks:{
+							stepSize: 20, //メモリの間隔を20に
+							callback: function(value) {
+							return value + ' 秒'; // ラベルに「s」を追加
+							}
+						},
+						title:{
+							display:true,
+							text:'53%の心拍数に戻るまでの時間(秒)'
+						}
+					}
+				}
+			}
+			
+		});
+</script>
+
 </body>
 </html>
