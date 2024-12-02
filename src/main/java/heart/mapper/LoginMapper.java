@@ -11,7 +11,7 @@ import heart.model.LoginModel;
 @Mapper
 public interface LoginMapper {
 	
-	public LoginModel getUsername(int id);
+	public LoginModel getUsername(String id);
 	
 	public LoginModel getModel(String username, String password, LocalDate date);
 }

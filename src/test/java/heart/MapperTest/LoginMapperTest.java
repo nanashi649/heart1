@@ -23,7 +23,7 @@ public class LoginMapperTest {
 	@Test
 	public void testGetUsername() {
 	//usernameプロパティのみ取り出すためにオブジェクト化
-	LoginModel loginModel = loginMapper.getUsername(1);
+	LoginModel loginModel = loginMapper.getUsername("1");
 	//データベースに登録しているidをもとにデータを取得、登録しているusernameとあっているかテスト
 	assertEquals("test_user1", loginModel.getUsername());
 	System.out.println("Username" + loginModel.getUsername());

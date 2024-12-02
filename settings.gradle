@@ -1,10 +1,2 @@
 rootProject.name = 'heart1'
 
-// H2 Databaseの設定
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.username=sa
-
-// H2 Consoleの有効化
-// webブラウザで操作可能になる
-spring.h2.console.enabled=true

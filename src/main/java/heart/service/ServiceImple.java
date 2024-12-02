@@ -16,7 +16,7 @@ public class ServiceImple implements LoginService {
 
 
 	@Override
-	public String getUsername(int id) {
+	public String getUsername(String id) {
 		// TODO 自動生成されたメソッド・スタブ
 		LoginModel loginmodel = loginMapper.getUsername(id);
 		return loginmodel.getUsername();

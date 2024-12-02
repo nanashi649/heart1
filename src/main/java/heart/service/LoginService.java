@@ -10,6 +10,6 @@ import heart.model.LoginModel;
 public interface LoginService {
 	public LoginModel  getModel(String username,String password,LocalDate date) ;
 
-	public  String  getUsername(int i) ;
+	public  String  getUsername(String i) ;
 	
 }
