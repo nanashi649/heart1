@@ -8,13 +8,16 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.web.servlet.MockMvc;
 
+import heart.config.SecurityConfig;
 import heart.controller.LoginController;
 import heart.mapper.LoginMapper;
 import heart.service.LoginService;
 
 @WebMvcTest(LoginController.class)
+@Import(SecurityConfig.class)  // カスタムセキュリティ設定を読み込む
 public class ControllerTest {
 	//Autowiredでインスタンス化を省略
 	@Autowired

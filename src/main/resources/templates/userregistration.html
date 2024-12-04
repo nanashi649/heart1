@@ -6,16 +6,21 @@
 </head>
 <body>
 	<form th:action ="@{/userregistration}" method=post>
-    <h2>ユーザ登録</h2>
-    <label for ="user-name">ユーザー名（必須）</label>
-    <input id = "user-name" type ="text" name = "user-name" placeholder="山田　太朗">
+    <h2>ユーザ登録</h2> 
+	
+    <label for ="username">氏名（必須）</label>
+    <input id = "username" type ="text" name = "username" placeholder="山田　太朗">
     
+
+	<label for = "password">ID（好きな英数字）</label>
+	<input id = "password" type="text" name = "password" placeholder = "nanashi000">
+	
     <label for = "password">パスワード（必須）</label>
     <input id = "password" type="text" name = "password" placeholder = "abc012">
 
     <label for = "birthday">生年月日（必須）</label>
     <input id ="birthday" type = "date" name = "birthday">
-    
+
 
     <button type="submit">登録する</button>
     </form>

@@ -29,8 +29,8 @@ public class SecurityConfig {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login?logout") // ログアウト後のリダイレクト先
                 .permitAll()
-            );
-
+            )
+        .csrf().disable();  // テスト時に CSRF を無効化
         return http.build();
     }
 }
