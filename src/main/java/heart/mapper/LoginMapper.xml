@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="heart.mapper.LoginMapper">
     <select id="getUsername" resultType="heart.model.LoginModel">
-    SELECT "LT_HeartRate".id, "LT_HeartRate".username, "LT_HeartRate".password
-    FROM PUBLIC."LT_HeartRate"
-    WHERE "LT_HeartRate".id = #{id,jdbcType=VARCHAR}
+    SELECT "LT_HeartRate"."id", "LT_HeartRate"."username", "LT_HeartRate"."password"
+    FROM "LT_HeartRate"
+    WHERE "LT_HeartRate"."id" = #{id,jdbcType=VARCHAR}
 </select>
     
    

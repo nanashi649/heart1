@@ -30,7 +30,7 @@ public class ControllerTest {
 	public void test_display() throws Exception{
 		mockMvc.perform(
 				get("/login")
-				.param("test_user", "1234")
+				.param("test_user1", "password")
 				)
 		//ステータスが２００か
 		.andExpect(status().isOk())
