@@ -16,6 +16,6 @@ public class HeartRateController {
 	@PostMapping("/maxHeart")
 	public String RegistRate(HeartRate model) {
 		service.setHeartRate(model);
-		return "/maxHeart";
+		return "MaxHeartRate";
 	}
 }
