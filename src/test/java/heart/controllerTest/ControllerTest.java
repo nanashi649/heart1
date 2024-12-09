@@ -5,10 +5,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.jupiter.api.Test;
+import org.mybatis.spring.boot.test.autoconfigure.AutoConfigureMybatis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import heart.config.SecurityConfig;
@@ -17,7 +19,11 @@ import heart.mapper.LoginMapper;
 import heart.service.LoginService;
 
 @WebMvcTest(LoginController.class)
-@Import(SecurityConfig.class)  // カスタムセキュリティ設定を読み込む
+
+@Import(SecurityConfig.class) // SecurityConfigを適用@Import(SecurityConfig.class) // SecurityConfigを適用
+
+//MyBatisを使う用意
+@AutoConfigureMybatis
 public class ControllerTest {
 	//Autowiredでインスタンス化を省略
 	@Autowired
@@ -26,14 +32,15 @@ public class ControllerTest {
 	@MockBean
 	LoginService loginService;
 	
+	
 	@MockBean
 	LoginMapper loginMapper;
 	
+	@WithMockUser(username = "test_user1", roles = {"USER"})
 	@Test
 	public void test_display() throws Exception{
 		mockMvc.perform(
 				get("/login")
-				.param("test_user1", "password")
 				)
 		//ステータスが２００か
 		.andExpect(status().isOk())

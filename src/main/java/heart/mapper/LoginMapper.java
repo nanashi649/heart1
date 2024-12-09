@@ -12,8 +12,9 @@ import heart.model.LoginModel;
 public interface LoginMapper {
 	
 	public LoginModel getUsername(String id);
-	
+
 	public LoginModel getModel(String username, String password, LocalDate date);
+	
 }
 
 

@@ -5,5 +5,5 @@ create table "LT_HeartRate" (
     "username" varchar(50) not null,
     "maxHeartRate" Integer,
     "heartRate53" Integer,
-    "LTheartRate" Integer
+    "LTHeartRate" Integer
 );

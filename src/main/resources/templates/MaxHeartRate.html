@@ -75,7 +75,7 @@
 	
 </head>
 <body>
-    <form>
+    <form th:action ="@{/maxheart}" method =POST>
     <label for="maxHeart">最大心拍数</label>
     <input value="${maxHeart}" type="number" id="maxHeart" name="maxHeart" oninput="calculateAll()">
     <br><br>
@@ -202,6 +202,8 @@
 			
 		});
 </script>
+
+
 
 </body>
 </html>

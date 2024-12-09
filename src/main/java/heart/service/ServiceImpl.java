@@ -9,7 +9,7 @@ import heart.mapper.LoginMapper;
 import heart.model.LoginModel;
 
 @Service
-public class ServiceImple implements LoginService {
+public class ServiceImpl implements LoginService {
 	
 	@Autowired
     private LoginMapper loginMapper;

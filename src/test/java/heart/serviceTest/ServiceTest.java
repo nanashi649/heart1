@@ -15,14 +15,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import heart.mapper.LoginMapper;
 import heart.model.LoginModel;
-import heart.service.ServiceImple;
+import heart.service.ServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 public class ServiceTest {
 	
 	//テスト対象にmockを注入
 	@InjectMocks
-	ServiceImple serviceImple;
+	ServiceImpl serviceImple;
 	//mapperをmock化
 	@Mock
 	LoginMapper mapper;
