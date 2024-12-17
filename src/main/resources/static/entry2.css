@@ -1,0 +1,273 @@
+#open
+#close{
+    background: #ed8;
+    border:3px solid #ed8;
+    border-radius: 5rem;
+    padding: 1rem,2rem;
+    cursor: pointer;
+}
+#mask{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+}
+/* ここからmodal設定 */
+
+#modal3{
+  background: #fff;
+  max-width: 36rem;
+  padding: 2rem;
+  border-radius: 5rem;
+  position: absolute;
+  inset:  10rem 0 auto;
+  margin: auto;
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+#modal4{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal5{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal6{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal7{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal8{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal9{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal10{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal11{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal12{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal13{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+#modal14{
+    background: #fff;
+    max-width: 36rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    inset:  10rem 0 auto;
+    margin: auto;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+/* ここまでmodal設定 */
+
+
+
+/* ページの設定 */
+.page {
+  display: none; /* 最初は非表示 */
+}
+.page.active {
+  display: block; /* 表示するページだけブロック表示 */
+}
+
+
+
+/* メニュー */
+
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+}
+
+.menu {
+  font-weight: 100;
+  background: #efefef;
+  width: 150px;
+  height: 100%;
+  padding-left: 50px;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  right: -130px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  color: #222;
+}
+.menu:hover, .menu:focus {
+  transform: translate3d(-130px, 0, 0);
+  animation-timing-function: 1s ease-in;
+}
+.menu .title {
+  top: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transform: rotate(270deg);
+  left: 10px;
+  font-weight: 800;
+  font-size: 15px;
+}
+.menu .nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: 100;
+}
+.menu .nav li {
+  padding-bottom: 30px;
+  list-style-type: none;
+}
+.menu .nav li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+.menu .nav li a:hover {
+  color: #aaa;
+}
+
+.intro {
+  position: absolute;
+  top: 30%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-size: 45px;
+  text-align: center;
+  font-style: italic;
+}

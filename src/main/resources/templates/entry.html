@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Example</title>
+  <!-- top.css を適用 -->
+  <link rel="stylesheet" href="./entry.css">
+  <script src="./entry.js" defer></script>
+  
+  
+</head>
+<body>
+
+  <div id="mask"></div>
+
+    <!-- メニュー -->
+    <div class="menu">
+        <div class="title">MENU</div>
+        <ul class="nav">
+          <li><a href="#">YOUR LT PROPERTY</a></li>
+          <li><a href="#"> TUTORIAL</a></li>
+          <li><a href="MaxHeartRate.html">測定</a></li>
+        </ul>
+    </div>
+    
+
+    <button id="open">open</button>
+    <!-- modalページの設定 -->
+    <section id="modal" class="page.active">
+        <p>はじめまして！<br>
+          LTHeartです！
+        </p>
+        <!-- page2プロパティを渡す -->
+        <button onclick="showPage('modal2')" id="open2">進む</button>
+    </section>
+
+   
+    <section id="modal2" class="page" >
+      <p>最初にあなたのことを教えてください！</p>
+      <button onclick="showPage('modal1')" id = "back1">戻る</button>
+      <button onclick="window.open('userregistration.html')"  id = "registrationPage">ユーザ登録へ</button>
+    </section>
+
+
+
+</body>
+</html>
