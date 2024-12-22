@@ -45,7 +45,7 @@ const open10 = document.querySelector('#open10');
 const back10 = document.querySelector('#back10');
 
 //モータルウィンドウ11
-const modal11= document.querySelector('#modal11');
+const modal11 = document.querySelector('#modal11');
 const open11 = document.querySelector('#open11');
 const back11 = document.querySelector('#back11');
 
@@ -70,17 +70,17 @@ const back14 = document.querySelector('#back14');
 
 //ここからanimation
 const showKeyframes = {
-  opacity: [0, 1],
-  visibility: 'visible',
+	opacity: [0, 1],
+	visibility: 'visible',
 };
 const hideKeyframes = {
-  opacity: [1, 0],
-  visibility: 'hidden',
+	opacity: [1, 0],
+	visibility: 'hidden',
 };
 const options = {
-  duration: 800,
-  easing: 'ease',
-  fill: 'forwards',
+	duration: 800,
+	easing: 'ease',
+	fill: 'forwards',
 };
 
 //ここまでanimation
@@ -91,77 +91,77 @@ const options = {
 
 //モータルウィンドウ３ページ目
 open3.addEventListener('click', () => {
-    modal3.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal3.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
 //モータルウィンドウ4ページ目
 open4.addEventListener('click', () => {
-    modal4.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal4.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ5ページ目
+//モータルウィンドウ5ページ目
 open5.addEventListener('click', () => {
-    modal5.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal5.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ6ページ目
+//モータルウィンドウ6ページ目
 open6.addEventListener('click', () => {
-    modal6.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal6.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ7ページ目
+//モータルウィンドウ7ページ目
 open7.addEventListener('click', () => {
-    modal7.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal7.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ8ページ目
+//モータルウィンドウ8ページ目
 open8.addEventListener('click', () => {
-    modal8.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal8.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ9ページ目
+//モータルウィンドウ9ページ目
 open9.addEventListener('click', () => {
-    modal9.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal9.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ10ページ目
+//モータルウィンドウ10ページ目
 open10.addEventListener('click', () => {
-    modal10.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal10.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ11ページ目
+//モータルウィンドウ11ページ目
 open11.addEventListener('click', () => {
-    modal11.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal11.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ12ページ目
+//モータルウィンドウ12ページ目
 open12.addEventListener('click', () => {
-    modal12.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal12.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ13ページ目
+//モータルウィンドウ13ページ目
 open13.addEventListener('click', () => {
-    modal13.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal13.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //モータルウィンドウ14ページ目
+//モータルウィンドウ14ページ目
 open14.addEventListener('click', () => {
-    modal14.animate(showKeyframes, options);
-    mask.animate(showKeyframes, options);
-  });
+	modal14.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
+});
 
-  //ここまで開く
+//ここまで開く
 
 
 
@@ -169,86 +169,86 @@ open14.addEventListener('click', () => {
 //ここから戻る
 
 //3ページに戻る
-back3.addEventListener('click',() =>{
-  modal3.animate(showKeyframes,options);
-  mask.animate(showKeyframes, options);
+back3.addEventListener('click', () => {
+	modal3.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //4ページに戻る
- back4.addEventListener('click',() =>{
-     modal4.animate(showKeyframes,options);
-     mask.animate(showKeyframes, options);
+//4ページに戻る
+back4.addEventListener('click', () => {
+	modal4.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
 //5ページに戻る
-back5.addEventListener('click',() =>{
-    modal5.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+back5.addEventListener('click', () => {
+	modal5.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //6ページに戻る
-back6.addEventListener('click',() =>{
-    modal6.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//6ページに戻る
+back6.addEventListener('click', () => {
+	modal6.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
 //7ページに戻る
-back7.addEventListener('click',() =>{
-    modal7.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+back7.addEventListener('click', () => {
+	modal7.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //8ページに戻る
-back8.addEventListener('click',() =>{
-    modal8.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//8ページに戻る
+back8.addEventListener('click', () => {
+	modal8.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //9ページに戻る
- back9.addEventListener('click',() =>{
-    modal9.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//9ページに戻る
+back9.addEventListener('click', () => {
+	modal9.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //10ページに戻る
- back10.addEventListener('click',() =>{
-    modal10.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//10ページに戻る
+back10.addEventListener('click', () => {
+	modal10.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //11ページに戻る
- back11.addEventListener('click',() =>{
-    modal11.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//11ページに戻る
+back11.addEventListener('click', () => {
+	modal11.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //12ページに戻る
- back12.addEventListener('click',() =>{
-    modal12.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//12ページに戻る
+back12.addEventListener('click', () => {
+	modal12.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
- //13ページに戻る
- back13.addEventListener('click',() =>{
-    modal13.animate(showKeyframes,options);
-    mask.animate(showKeyframes, options);
+//13ページに戻る
+back13.addEventListener('click', () => {
+	modal13.animate(showKeyframes, options);
+	mask.animate(showKeyframes, options);
 });
 
 
 
 function showPage(pageId) {
-  //activeなページを非表示
-  const activepage = document.getElementsByClassName('page.active')[0];
-      if(activepage){
-      activepage.classList.remove ('page.active');
-      activepage.classList.add('page');
-      }
-  const nextpage = document.getElementById(pageId);
-  if(nextpage){
-    nextpage.classList.remove ('page');
-    nextpage.classList.add('page.active');
-  }
-  };
+	//activeなページを非表示
+	const activepage = document.getElementsByClassName('page.active')[0];
+	if (activepage) {
+		activepage.classList.remove('page.active');
+		activepage.classList.add('page');
+	}
+	const nextpage = document.getElementById(pageId);
+	if (nextpage) {
+		nextpage.classList.remove('page');
+		nextpage.classList.add('page.active');
+	}
+};
 
 
 

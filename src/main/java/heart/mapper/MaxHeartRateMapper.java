@@ -6,5 +6,5 @@ import heart.model.HeartRate;
 
 @Mapper
 public interface MaxHeartRateMapper {
-	public int setHeartModel(HeartRate model);
+	public int saveHeartModel(HeartRate model);
 }

@@ -6,5 +6,7 @@ import heart.model.HeartRate;
 
 @Service
 public interface MaxHeartRateService {
-	public int setHeartRate(HeartRate model);
+
+	public int saveHeartRate(HeartRate model);
+
 }

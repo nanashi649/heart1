@@ -1,4 +1,4 @@
-package heart.controllerTest;
+package heart.controller;
 
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
@@ -15,7 +15,6 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import heart.config.SecurityConfig;
-import heart.controller.HeartRateController;
 import heart.model.HeartRate;
 import heart.service.MaxHeartRateService;
 
@@ -25,27 +24,27 @@ import heart.service.MaxHeartRateService;
 @Import(SecurityConfig.class)
 public class HeartRateControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+	@Autowired
+	private MockMvc mockMvc;
 
-    @MockBean
-    private MaxHeartRateService service;
-    
-    @WithMockUser(username = "test_user1", roles = {"USER"})
-    @Test
-    public void testRegistRate() throws Exception {
+	@MockBean
+	private MaxHeartRateService service;
 
-        // POSTリクエストをシミュレーション
-        mockMvc.perform(
-                post("/maxHeart")
-                    .contentType("application/x-www-form-urlencoded")
-                    .param("id", "1")
-                    .param("LTHeartRate", "135")
-                    .param("maxHeartRate", "183"))
-            .andExpect(status().isOk()) // ステータスコード200を期待
-            .andExpect(view().name("MaxHeartRate")); // ビュー名が"/MaxHeartRate"であることを確認
+	@WithMockUser(username = "test_user1", roles = { "USER" })
+	@Test
+	public void testRegistRate() throws Exception {
 
-        // サービスメソッドが正しく呼び出されたか確認
-        verify(service, times(1)).setHeartRate(any(HeartRate.class));
-    }
+		// POSTリクエストをシミュレーション
+		mockMvc.perform(
+				post("/maxHeart")
+						.contentType("application/x-www-form-urlencoded")
+						.param("id", "1")
+						.param("LTHeartRate", "135")
+						.param("maxHeartRate", "183"))
+				.andExpect(status().isOk()) // ステータスコード200を期待
+				.andExpect(view().name("max_heart_rate")); // ビュー名が"/MaxHeartRate"であることを確認
+
+		// サービスメソッドが正しく呼び出されたか確認
+		verify(service, times(1)).saveHeartRate(any(HeartRate.class));
+	}
 }

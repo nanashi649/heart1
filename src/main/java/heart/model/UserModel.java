@@ -10,5 +10,5 @@ public class UserModel {
 	private String username;
 	private String password;
 	private LocalDate birthday;
-	
+	private String group;
 }

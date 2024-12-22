@@ -1,15 +1,13 @@
-package heart.MapperTest;
+package heart.mapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.test.context.ContextConfiguration;
 
 import heart.Heart1Application;
-import heart.mapper.LoginMapper;
 import heart.model.LoginModel;
 
 @MybatisTest
@@ -17,15 +15,23 @@ import heart.model.LoginModel;
 //設定したデータベースを利用
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class LoginMapperTest {
-	@Autowired
-	private LoginMapper loginMapper;
+	
+	private final LoginMapper mapper;
+	
+	public LoginMapperTest(LoginMapper mapper) {
+		this.mapper = mapper;
+	}
 	
 	@Test
 	public void testGetUsername() {
-	//usernameプロパティのみ取り出すためにオブジェクト化
-	LoginModel loginModel = loginMapper.getUsername("1");
-	//データベースに登録しているidをもとにデータを取得、登録しているusernameとあっているかテスト
-	assertEquals("test_user1", loginModel.getUsername());
-	System.out.println("Username" + loginModel.getUsername());
+		LoginModel expected = new LoginModel();
+	    expected.setId("1");
+	    expected.setUsername("test_user1");
+	    expected.setPassword("password");
+	    
+	    // 実際の結果を取得
+	    LoginModel actual = mapper.findUsername("1");
+	    
+	    assertEquals(expected, actual);
 	}
 }

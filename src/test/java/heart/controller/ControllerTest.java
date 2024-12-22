@@ -1,4 +1,4 @@
-package heart.controllerTest;
+package heart.controller;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -28,28 +28,24 @@ public class ControllerTest {
 	//Autowiredでインスタンス化を省略
 	@Autowired
 	MockMvc mockMvc;
-	
+
 	@MockBean
 	LoginService loginService;
-	
-	
+
 	@MockBean
 	LoginMapper loginMapper;
-	
-	@WithMockUser(username = "test_user1", roles = {"USER"})
-	@Test
-	public void test_display() throws Exception{
-		mockMvc.perform(
-				get("/login")
-				)
-		//ステータスが２００か
-		.andExpect(status().isOk())
-		//loginを返すか
-		.andExpect(view().name("login"))
-		//loginを含むか
-		.andExpect(content().string(containsString("ログイン")))
-		;
-	}
-	
 
+	@WithMockUser(username = "test_user1", roles = { "USER" })
+	@Test
+	public void test_display() throws Exception {
+		mockMvc.perform(
+				get("/login"))
+				//ステータスが２００か
+				.andExpect(status().isOk())
+				//loginを返すか
+				.andExpect(view().name("login"))
+				//loginを含むか
+				.andExpect(content().string(containsString("ログイン")));
 	}
+
+}

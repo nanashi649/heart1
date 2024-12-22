@@ -1,4 +1,4 @@
-package heart.controllerTest;
+package heart.controller;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -24,33 +24,32 @@ import heart.service.UserService;
 public class UserControllerTest {
 	@Autowired
 	MockMvc mockMvc;
-	
-	 @MockBean
-	 private UserService userService; // UserServiceをモック化することで依存関係を解決
-	
+
+	@MockBean
+	private UserService userService; // UserServiceをモック化することで依存関係を解決
+
 	@Autowired
 	UserMapper userMapper;
-	
+
 	@Test
-	public void registration_test() throws Exception{
+	public void registration_test() throws Exception {
 		mockMvc.perform(
 				//Getリクエストを送信
 				get("/userregistration"))
 				//ステータスがOKか
 				.andExpect(status().isOk())
-		
+
 				.andExpect(view().name("userregistration"))
-				
-				.andExpect(content().string(containsString("ユーザ登録")))
-				;
+
+				.andExpect(content().string(containsString("ユーザ登録")));
 	}
-	
+
 	@Test
 	public void post_test() throws Exception {
 		mockMvc.perform(
 				post("/userregistration"))
-		
+
 				.andExpect(status().isOk());
-				
+
 	}
 }

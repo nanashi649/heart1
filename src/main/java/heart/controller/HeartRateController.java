@@ -1,6 +1,5 @@
 package heart.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -10,12 +9,16 @@ import heart.service.MaxHeartRateService;
 @Controller
 public class HeartRateController {
 	
-	@Autowired
-	MaxHeartRateService service;
+	private  final MaxHeartRateService service;
 	
+	public HeartRateController(MaxHeartRateService service) {
+		this.service = service;
+	}
+
 	@PostMapping("/maxHeart")
 	public String RegistRate(HeartRate model) {
-		service.setHeartRate(model);
-		return "MaxHeartRate";
+		service.saveHeartRate(model);
+		return "max_heart_rate";
 	}
+
 }

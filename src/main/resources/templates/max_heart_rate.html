@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LT測定</title>
+	<script src="max_heart_rate.js" defer></script>
+	<link rel="stylesheet" href="./max_heart_rate.css">
+</head>
+
+<body>
+	<!--	メニューの表示-->
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/MaxHeartRate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
+
+
+	<form th:action="@{/maxheart}" method=POST>
+		<label for="maxHeart">最大心拍数</label>
+		<input value="${maxHeart}" type="number" id="maxHeart" name="maxHeart" oninput="calculateAll()">
+		<br><br>
+
+		<label for="halfRate">53%の心拍数</label>
+		<!--	計算結果表示-->
+		<input th:value="${halfHeart}" type="number" id="halfRate" name="halfRate" readonly>
+		<br>
+		<table border="1">
+			<tr>
+				<th>指定心拍数</th>
+				<th>53%の心拍数に戻るまでの時間</th>
+			</tr>
+
+
+			<tr>
+				<td><input th:value="${HeartRateC}" type="number" id="HeartRateC" name="HeartRateC" readonly></td>
+				<td><input th:value="${TimeValueC}" type="number" id="TimeValueC" name="TimeValueC"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateD}" type="number" id="HeartRateD" name="HeartRateD" readonly></td>
+				<td><input th:value="${TimeValueD}" type="number" id="TimeValueD" name="TimeValueD"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateE}" type="number" id="HeartRateE" name="HeartRateE" readonly></td>
+				<td><input th:value="${TimeValueE}" type="number" id="TimeValueE" name="TimeValueE"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateF}" type="number" id="HeartRateF" name="HeartRateF" readonly></td>
+				<td><input th:value="${TimeValueF}" type="number" id="TimeValueF" name="TimeValueF"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateG}" type="number" id="HeartRateG" name="HeartRateG" readonly></td>
+				<td><input th:value="${TimeValueG}" type="number" id="TimeValueG" name="TimeValueG"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateH}" type="number" id="HeartRateH" name="HeartRateH" readonly></td>
+				<td><input th:value="${TimeValueH}" type="number" id="TimeValueH" name="TimeValueH"
+						oninput="updateChart()"></td>
+			</tr>
+
+			<tr>
+				<td><input th:value="${HeartRateI}" type="number" id="HeartRateI" name="HeartRateI" readonly></td>
+				<td><input th:value="${TimeValueI}" type="number" id="TimeValueI" name="TimeValueI"
+						oninput="updateChart()"></td>
+			</tr>
+		</table>
+	</form>
+
+
+
+	<!--	グラフを挿入-->
+	<div style="width: 600px;">
+		<canvas id="chart" width="600" height="300"></canvas>
+	</div>
+	<!--	Jquery(JavaScriptのライブラリで、HTMLの操作やイベント処理、アニメーション、Ajaxリクエストなどを簡単に実装する)を読み込む-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!--	Chart.js（グラフ描写ツール）を読み込む-->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./glaf.js"></script>
+</body>
+
+</html>

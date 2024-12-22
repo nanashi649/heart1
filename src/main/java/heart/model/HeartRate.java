@@ -10,7 +10,7 @@ public class HeartRate {
 	//id
 	private String Id;
 	//LT心拍数
-	private  int LTHeartRate;
+	private int LTHeartRate;
 	//最大心拍数
 	private int maxHeartRate;
 	//日付

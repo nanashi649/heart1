@@ -1,108 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Menu Example</title>
-  <!-- top.css を適用 -->
-  <link rel="stylesheet" href="./entry2.css">
-  <script src="./entry2.js" defer></script>
-  
-  
+	<meta charset="UTF-8">
+	<title>Menu Example</title>
+	<!-- top.css を適用 -->
+	<link rel="stylesheet" href="./entry2.css">
+	<script src="./entry2.js" defer></script>
+
+
 </head>
+
 <body>
 
-  <div id="mask"></div>
+	<div id="mask"></div>
 
-    <!-- メニュー -->
-    <div class="menu">
-        <div class="title">MENU</div>
-        <ul class="nav">
-          <li><a href="#">YOUR LT PROPERTY</a></li>
-          <li><a href="#"> TUTORIAL</a></li>
-          <li><a href="MaxHeartRate.html">測定</a></li>
-        </ul>
-    </div>
-    
-    <button id="open3">open</button>
-  
-    <!-- modalページの設定 -->
-    <section id="modal3" class="page.active">
-        <p>このアプリは心拍数を用いて皆さんのスタミナ面のトレーニングを支援、管理するアプリです
-        </p>
-        <!-- page2プロパティを渡す -->
-         <a href="top.html">topに戻る</a>
-        <button onclick="showPage('modal4')" id="open4">進む</button>
-    </section>
+	<!-- メニュー -->
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/MaxHeartRate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
 
-   
-    <section id="modal4" class="page" >
-      <p>これから使いかたをご説明いたします。<br>
-    また、LT値や心拍トレーニングについて把握されたい方は下記のリンクをクリックしてください。<br>
-    ※リンク先の説明はメニューバーからいつでもご確認いただけます。</p>
-      <button onclick="showPage('modal3')" id = "back3">戻る</button>
-      <button onclick="showPage('modal5')" id="open5">進む</button>
-    </section>
 
-    <section id="modal5" class="page" >
-        <p>このアプリを使うにはあなたの「最大心拍数」、「LT値」の二つのデータを調べる必要があります</p>
-        <button onclick="showPage('modal4')" id = "back4">戻る</button>
-        <button onclick="showPage('modal6')" id="open6">進む</button>
-      </section>
+	<button id="open3">open</button>
 
-      <section id="modal6" class="page" >
-        <p>まず、あなたの最大心拍数を計測してみましょう！<br>
-        計測方法は様々な方法がありますが、ここでは確度の高い400ｍ～800ｍを全力で走った後の心拍数を計測してみましょう！<br>
-    ※計測方法について詳しく知りたい方はＣＯＬＵＭをご覧ください</p>
-        <button onclick="showPage('modal5')" id = "back5">戻る</button>
-        <button onclick="showPage('modal7')" id="open7">進む</button>
-      </section>
+	<!-- modalページの設定 -->
+	<section id="modal3" class="page.active">
+		<p>このアプリは心拍数を用いて皆さんのスタミナ面のトレーニングを支援、管理するアプリです
+		</p>
+		<!-- page2プロパティを渡す -->
+		<a href="top.html">topに戻る</a>
+		<button onclick="showPage('modal4')" id="open4">進む</button>
+	</section>
 
-      <section id="modal7" class="page" >
-        <p>最大心拍数が計測できましたか？それでは画像のように入力してみましょう</p>
-        <!-- 画像を入れる -->
 
-        <img src =" C:\Users\user\Desktop\LT\entry\picture\スクリーンショット 2024-12-17 152911.png">
-        <button onclick="showPage('modal6')" id = "back6">戻る</button>
-        <button onclick="showPage('modal8')" id="open8">進む</button>
-      </section>
+	<section id="modal4" class="page">
+		<p>これから使いかたをご説明いたします。<br>
+			また、LT値や心拍トレーニングについて把握されたい方は下記のリンクをクリックしてください。<br>
+			※リンク先の説明はメニューバーからいつでもご確認いただけます。</p>
+		<button onclick="showPage('modal3')" id="back3">戻る</button>
+		<button onclick="showPage('modal5')" id="open5">進む</button>
+	</section>
 
-      <section id="modal8" class="page" >
-        <p>次は「LT値」の計測です！<br>
-        「最大心拍数」を入力したことであなたの「ゾーン」が判明しました<br>
-        「ゾーン」とはあなたのトレーニング強度を測る心拍数の値になります。</p>
-        <button onclick="showPage('modal7')" id = "back7">戻る</button>
-        <button onclick="showPage('modal9')" id="open9">進む</button>
-      </section>
+	<section id="modal5" class="page">
+		<p>このアプリを使うにはあなたの「最大心拍数」、「LT値」の二つのデータを調べる必要があります</p>
+		<button onclick="showPage('modal4')" id="back4">戻る</button>
+		<button onclick="showPage('modal6')" id="open6">進む</button>
+	</section>
 
-      <section id="modal9" class="page" >
-        <p>「LT値」とはこの「ゾーン」から平常時の心拍数といわれている「最大心拍数の５３％」に戻るまでどれくらいの時間がかかるかで計測します。。
-        <br>apple watchなど心拍数を計測できる物を用いて計測してみましょう！
-             ゾーンへの心拍数へ持っていく方法はどんな方法でも構いません</p>
-        <button onclick="showPage('modal8')" id = "back8">戻る</button>
-        <button onclick="showPage('modal10')" id="open10">進む</button>
-      </section>
+	<section id="modal6" class="page">
+		<p>まず、あなたの最大心拍数を計測してみましょう！<br>
+			計測方法は様々な方法がありますが、ここでは確度の高い400ｍ～800ｍを全力で走った後の心拍数を計測してみましょう！<br>
+			※計測方法について詳しく知りたい方はＣＯＬＵＭをご覧ください</p>
+		<button onclick="showPage('modal5')" id="back5">戻る</button>
+		<button onclick="showPage('modal7')" id="open7">進む</button>
+	</section>
 
-      <section id="modal10" class="page" >
-        <p>時間の入力したら画像のようにグラフが自動で生成されます<br>
-        グラフの折れ曲がっている部分、傾きが急になっている部分があなたの「LT値」です！</p>
-        <button onclick="showPage('modal9')" id = "back9">戻る</button>
-        <button onclick="showPage('modal11')" id="open11">進む</button>
-      </section>
+	<section id="modal7" class="page">
+		<p>最大心拍数が計測できましたか？それでは画像のように入力してみましょう</p>
+		<!-- 画像を入れる -->
 
-      <section id="modal11" class="page" >
-        <p>それではあなたの「LT値」を入力してみましょう<br>
-        この「LT値」を伸ばすことがあなたがスタミナをつけることにつながります。</p>
-        <button onclick="showPage('modal10')" id = "back10">戻る</button>
-        <button onclick="showPage('modal12')" id="open12">進む</button>
-      </section>
+		<img src=" C:\Users\user\Desktop\LT\entry\picture\スクリーンショット 2024-12-17 152911.png">
+		<button onclick="showPage('modal6')" id="back6">戻る</button>
+		<button onclick="showPage('modal8')" id="open8">進む</button>
+	</section>
 
-      <section id="modal12" class="page" >
-        <p>専門用語が多くて大変でしたね。子の計測方法や用語についてはCOLUMで説明しているのでそちらもぜひご覧ください。<br>
-            お疲れ様でした！こちらでチュートリアルは以上になります。
-        </p>
-        <button onclick="showPage('modal11')" id = "back11">戻る</button>
-        <button onclick="location.href='top.html'">トップページへ</button>
-      </section>
+	<section id="modal8" class="page">
+		<p>次は「LT値」の計測です！<br>
+			「最大心拍数」を入力したことであなたの「ゾーン」が判明しました<br>
+			「ゾーン」とはあなたのトレーニング強度を測る心拍数の値になります。</p>
+		<button onclick="showPage('modal7')" id="back7">戻る</button>
+		<button onclick="showPage('modal9')" id="open9">進む</button>
+	</section>
+
+	<section id="modal9" class="page">
+		<p>「LT値」とはこの「ゾーン」から平常時の心拍数といわれている「最大心拍数の５３％」に戻るまでどれくらいの時間がかかるかで計測します。。
+			<br>apple watchなど心拍数を計測できる物を用いて計測してみましょう！
+			ゾーンへの心拍数へ持っていく方法はどんな方法でも構いません
+		</p>
+		<button onclick="showPage('modal8')" id="back8">戻る</button>
+		<button onclick="showPage('modal10')" id="open10">進む</button>
+	</section>
+
+	<section id="modal10" class="page">
+		<p>時間の入力したら画像のようにグラフが自動で生成されます<br>
+			グラフの折れ曲がっている部分、傾きが急になっている部分があなたの「LT値」です！</p>
+		<button onclick="showPage('modal9')" id="back9">戻る</button>
+		<button onclick="showPage('modal11')" id="open11">進む</button>
+	</section>
+
+	<section id="modal11" class="page">
+		<p>それではあなたの「LT値」を入力してみましょう<br>
+			この「LT値」を伸ばすことがあなたがスタミナをつけることにつながります。</p>
+		<button onclick="showPage('modal10')" id="back10">戻る</button>
+		<button onclick="showPage('modal12')" id="open12">進む</button>
+	</section>
+
+	<section id="modal12" class="page">
+		<p>専門用語が多くて大変でしたね。子の計測方法や用語についてはCOLUMで説明しているのでそちらもぜひご覧ください。<br>
+			お疲れ様でした！こちらでチュートリアルは以上になります。
+		</p>
+		<button onclick="showPage('modal11')" id="back11">戻る</button>
+		<button onclick="location.href='top.html'">トップページへ</button>
+	</section>
 
 </body>
+
 </html>

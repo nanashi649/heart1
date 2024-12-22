@@ -1,7 +1,5 @@
 package heart.mapper;
 
-
-
 import org.apache.ibatis.annotations.Mapper;
 
 import heart.model.UserModel;

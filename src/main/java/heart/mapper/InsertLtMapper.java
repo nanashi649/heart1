@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import heart.model.HeartRate;
 
 @Mapper
-public interface InsertLTMapper {
-	public  int setLT(HeartRate model);
+public interface InsertLtMapper {
+	public int saveLT(HeartRate model);
 }

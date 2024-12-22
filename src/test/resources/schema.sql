@@ -6,6 +6,6 @@ create table "LT_HeartRate" (
     "maxHeartRate" Integer,
     "heartRate53" Integer,
     "LTHeartRate" Integer,
-    "CURRENT DATE" DATE
-    
+    "CURRENT DATE" DATE,
+    "group" varchar(50)
 );
