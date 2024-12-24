@@ -27,6 +27,7 @@ public class LoginServiceTest {
 	@BeforeEach
 	void setUp() {
 		MockitoAnnotations.openMocks(this); // モックの初期化
+		serviceImpl = new LoginServiceImpl(mapper);
 	}
 
 	@Test

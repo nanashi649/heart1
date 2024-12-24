@@ -26,6 +26,7 @@ public class MaxHeartRateServiceTest {
 	@BeforeEach
 	public void setUp() {
 		MockitoAnnotations.openMocks(this); // モックの初期化
+		service = new MaxHeartRateServiceImpl(mapper);
 	}
 
 	@Test

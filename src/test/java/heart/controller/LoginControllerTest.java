@@ -24,7 +24,7 @@ import heart.service.LoginService;
 
 //MyBatisを使う用意
 @AutoConfigureMybatis
-public class ControllerTest {
+public class LoginControllerTest {
 	//Autowiredでインスタンス化を省略
 	@Autowired
 	MockMvc mockMvc;

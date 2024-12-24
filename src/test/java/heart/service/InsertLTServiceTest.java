@@ -28,6 +28,7 @@ public class InsertLTServiceTest {
 	@BeforeEach
 	public void setUp() {
 		MockitoAnnotations.openMocks(this); // モックの初期化
+		service = new InsertLtServiceImpl(mapper); //コンストラクタ起動
 	}
 
 	@Test

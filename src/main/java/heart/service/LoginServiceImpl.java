@@ -1,5 +1,6 @@
 package heart.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import heart.mapper.LoginMapper;
@@ -7,7 +8,8 @@ import heart.model.LoginModel;
 
 @Service
 public class LoginServiceImpl implements LoginService {
-
+	
+	@Autowired
 	private final LoginMapper mapper;
 	
 	public LoginServiceImpl(LoginMapper mapper) {

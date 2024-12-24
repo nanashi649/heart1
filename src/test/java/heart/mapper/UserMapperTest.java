@@ -25,7 +25,7 @@ public class UserMapperTest {
 		model.setUsername("test_user1");
 		model.setPassword("1");
 		model.setBirthday(LocalDate.of(1997, 10, 27));
-		model.setGroup("〇〇中学校");
+		model.setGroupName("〇〇中学校");
 
 		//insertUserをもちいてデータを挿入
 		int result = mapper.insertUser(model);
