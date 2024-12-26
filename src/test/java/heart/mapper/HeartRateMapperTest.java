@@ -4,18 +4,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import heart.model.HeartRate;
 
 @MybatisTest
 public class HeartRateMapperTest {
 
-private final MaxHeartRateMapper mapper;
-	
+	private final MaxHeartRateMapper mapper;
+
+	@Autowired
 	public HeartRateMapperTest(MaxHeartRateMapper mapper) {
 		this.mapper = mapper;
 	}
-	
+
 	@Test
 	public void MapperTest() {
 		HeartRate model = new HeartRate();

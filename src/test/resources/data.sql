@@ -2,7 +2,7 @@ INSERT INTO "LT_HeartRate" (
     "id", "username", "password", "LTHeartRate", "CURRENT DATE",
     "groupPW", "groupName"
 ) VALUES (
-    '101', 'student_A', 'password', 135, '2023-10-01',
+    '101', 'student_A', 'password', 135, '1997-10-27',
     'PW', '〇〇中学校△△部'
 );
 
