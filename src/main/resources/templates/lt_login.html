@@ -20,10 +20,20 @@
 	</div>
 
 
-	<ul >
-		<!--			dataを1つずつ取り出し、繰り返しitemとしてとして処理して <li> を生成-->
-		<li th:each="item :${data}" th:text="${item}"></li>
-	</ul>
+	<form th:action="@{/lt_login}" method="POST">
+		<div>
+			<label for="group">グループ名：</label>
+			<input type="text" id="username" name="username" required>
+		</div>
+		<div>
+			<label for="groupassword">グループパスワード：</label>
+			<input type="password" id="password" name="password" required>
+		</div>
+		<div>
+			<button type="submit">グループリストを表示する</button>
+		</div>
+
+	</form>
 
 
 

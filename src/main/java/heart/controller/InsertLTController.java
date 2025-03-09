@@ -2,11 +2,13 @@ package heart.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import heart.model.HeartRate;
 import heart.service.InsertLtService;
 
 @Controller
+@RestControllerAdvice
 public class InsertLTController {
 
 	private  final InsertLtService service;

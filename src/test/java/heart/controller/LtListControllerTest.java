@@ -50,7 +50,7 @@ public class LtListControllerTest {
 		  
 		  when(service.findUsername("id")).thenReturn(Arrays.asList(user1));
 		
-		mockMvc.perform(get("/list"))
+		mockMvc.perform(get("/lt_list"))
 				.andExpect(status().isOk()) // ステータスが200 OKであることを確認
 				.andExpect(view().name("lt_list")) // ビュー名が "lt_list" であることを確認
 				.andExpect(model().attributeExists("data")); //"data" 属性が存在することを確認
