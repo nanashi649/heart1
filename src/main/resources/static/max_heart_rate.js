@@ -74,7 +74,7 @@ function updateChart() {
 
 		// 2区間移動平均データセットを追加
 		const twoPeriodMovingAverageDataset = {
-			label: '2区間移動平均',
+			label: '移動平均',
 			data: twoPeriodMovingAverageData,
 			type: 'line',
 			borderColor: 'rgba(255, 159, 64, 1)', // オレンジ色
