@@ -14,13 +14,13 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import heart.config.SecurityConfig;
-import heart.controller.LoginController;
 import heart.mapper.LoginMapper;
+import heart.service.InsertLtService;
 import heart.service.LoginService;
 
 @WebMvcTest(LoginController.class)
 
-@Import(SecurityConfig.class) // SecurityConfigを適用@Import(SecurityConfig.class) // SecurityConfigを適用
+@Import(SecurityConfig.class) // SecurityConfigを適用
 
 //MyBatisを使う用意
 @AutoConfigureMybatis
@@ -34,6 +34,10 @@ public class LoginControllerTest {
 
 	@MockBean
 	LoginMapper loginMapper;
+	
+	//なぜMockBeanと追加しなければテストが通らないか調査する必要あり
+	@MockBean 
+	private InsertLtService insertLtService;
 
 	@WithMockUser(username = "test_user1", roles = { "USER" })
 	@Test
