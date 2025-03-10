@@ -36,14 +36,14 @@
 
 		<div id="insertLT" class="page.active">
 
-			<input type="button" onclick="window.close()" value="×">
+			<input type="button" id="close" value="×">
 
 			<ul><label for="yourLT">LT値</label>
 			</ul><input th:value="${yourLT}" type="number" id="yourLT" name="yourLT">
 			<ul><label for="currentDate">計測した日付</label>
-			</ul><input th:value="${currentDate}" type="currentDate" id="currentDate" name="currentDate">
+			</ul><input th:value="${currentDate}" type="date" id="currentDate" name="currentDate">
 			<br>
-			<button type="submit">登録する</button>
+			<button type="submit" onclick="location.href='@{/myLT}'">登録する</button>
 		</div>
 	</form>
 </body>

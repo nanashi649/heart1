@@ -18,7 +18,7 @@ public class InsertLTController {
 	}
 
 	// HeartRateのデータを受け取る
-	@PostMapping("/insertLTController")
+	@PostMapping("/insertLT")
 	public String insertLT(HeartRate model) {
 		service.setLT(model); // サービスにモデルを渡す
 		return "myLT"; // myLTビューを返す
