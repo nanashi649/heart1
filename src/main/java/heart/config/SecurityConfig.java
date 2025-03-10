@@ -33,7 +33,7 @@ public class SecurityConfig {
 		return http.build();
 	}
 
-	//ログインしている場合ログイン情報を返す
+	//ログインしている場合ログイン情報を返す(必要なければ削除）
 	public String getCurrentUsername() {
 		org.springframework.security.core.Authentication authentication = SecurityContextHolder.getContext()
 				.getAuthentication();
@@ -44,4 +44,7 @@ public class SecurityConfig {
 		}
 
 	}
+	
+
+	
 }

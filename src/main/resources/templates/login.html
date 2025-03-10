@@ -8,6 +8,19 @@
 </head>
 
 <body>
+
+	<!--	メニュー-->
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/max_heart_rate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
+
+	<!--	ログイン機能-->
 	<form th:action="@{/login}" method="POST">
 		<div>
 			<label for="username">ユーザー名：</label>
