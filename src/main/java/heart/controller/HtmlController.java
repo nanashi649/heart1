@@ -30,8 +30,8 @@ public class HtmlController {
 		return "userregistration_completion";
 	}
 
-	@GetMapping("/MaxHeartRate")
+	@GetMapping("/max_heart_rate")
 	public String maxHeart() {
-		return "MaxHeartRate";
+		return "max_heart_rate";
 	}
 }

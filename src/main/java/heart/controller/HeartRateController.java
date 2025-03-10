@@ -15,7 +15,7 @@ public class HeartRateController {
 		this.service = service;
 	}
 
-	@PostMapping("/maxHeart")
+	@PostMapping("/MaxHeart")
 	public String RegistRate(HeartRate model) {
 		service.saveHeartRate(model);
 		return "max_heart_rate";
