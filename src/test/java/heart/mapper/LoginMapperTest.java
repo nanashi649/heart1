@@ -24,8 +24,7 @@ public class LoginMapperTest {
 			this.mapper = mapper;
 		}
 
-//	@Autowired
-//	public LoginMapper mapper;
+
 
 	@Test
 	public void testGetUsername() {
