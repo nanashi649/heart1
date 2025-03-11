@@ -35,7 +35,6 @@ public class LoginControllerTest {
 	@MockBean
 	LoginMapper loginMapper;
 	
-	//なぜMockBeanと追加しなければテストが通らないか調査する必要あり
 	@MockBean 
 	private InsertLtService insertLtService;
 
