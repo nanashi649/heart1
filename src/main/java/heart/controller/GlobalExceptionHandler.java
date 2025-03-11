@@ -21,4 +21,6 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleNoSuchElementException(NoSuchElementException e) {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("データが見つかりません:" + e.getMessage());
 	}
+	
+	
 }
