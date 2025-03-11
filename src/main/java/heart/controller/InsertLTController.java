@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import heart.model.HeartRate;
 import heart.service.InsertLtService;
 
+
 @Controller
 @RestControllerAdvice
 public class InsertLTController {
@@ -16,7 +17,9 @@ public class InsertLTController {
 	public InsertLTController(InsertLtService service) {
 		this.service = service;
 	}
-
+	
+	
+	
 	// HeartRateのデータを受け取る
 	@PostMapping("/insertLT")
 	public String insertLT(HeartRate model) {

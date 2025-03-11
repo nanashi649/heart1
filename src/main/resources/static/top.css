@@ -74,3 +74,10 @@ HTML CSS JSResult Skip Results Iframe EDIT ON body {
 	text-align: center;
 	font-style: italic;
 }
+
+.login{
+	font-size: 12px; 
+	    padding: 5px; 
+	    margin: 5px; 
+	    list-style: none; 
+}
