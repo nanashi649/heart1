@@ -23,8 +23,23 @@
 
 
 	<!-- LT値を表示 -->
-	<div class="current LT">
-		<p>LT値: <span th:text="${LTHeartRate}"></span></p>
+	<div class="history">
+		<h2>LT値</h2>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>日付</th>
+					<th>LT値</th>
+				</tr>
+			</thead>
+			<tbody th:if="${ltList != null and !#lists.isEmpty(ltList)}">
+			    <tr th:each="lt : ${ltList}">
+			        <td th:text="${lt.currentDate}"></td>
+			        <td th:text="${lt.LTHeartRate}"></td>
+			    </tr>
+			</tbody>
+
+
 	</div>
 
 	<div id="mask"></div>
