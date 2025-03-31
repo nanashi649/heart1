@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Example</title>
+	<!--	 top.css を適用 -->
+	<link rel="stylesheet" href="./entry2.css">
+</head>
+
+<body>
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/max_heart_rate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
+
+
+
+	<div class="information">
+		運動し続けて疲労がたまっていくと体には「乳酸」がたまっていきます。
+		<br>
+		心拍数は運動の強度にきれいに比例しますが、乳酸の濃度はある一点で急角度に変わります。
+		<br>
+		この地点はＬＴ（Lactate Threshold = 乳酸性作業閾値）と呼ばれます。
+		<br>
+		このＬＴ値前後でなにがおこなわれているかというと、ＬＴ値前では乳酸ができても処理しきれているのですが、
+		<br>
+		ＬＴ値後は処理が間に合わないこと、エネルギーの源として脂肪より糖を使う割合が大幅に増えるため、いきなり
+		<br>
+		乳酸がたまってしまいます。
+		<br>
+		ＬＴ値を伸ばすようなトレーニングをするとエネルギーを供給するミトコンドリアのが増え乳酸処理能力が上がるため、
+		<br>
+		比較的高い運動強度でも乳酸でパンパンになりにくくなります。
+		<br>
+		「ＬＴ値を知る」つまりＬＴのときの心拍数を知れば様々なトレーニングに応用することが可能です。
+		<br>
+		また、ＬＴ値を伸ばすことが出来たら動ける時間が伸びることにつながります。
+
+
+		<img src="/image/LT.png" alt="スクリーンショット">
+</body>
+
+
+
+</html>

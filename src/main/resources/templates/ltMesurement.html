@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Example</title>
+	<!--	 top.css を適用 -->
+	<link rel="stylesheet" href="./entry2.css">
+</head>
+
+<body>
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/max_heart_rate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
+
+
+
+	<div class="information">
+		<li>
+			心拍数とLTの関係について
+		</li>
+		通常ＬＴ値を計測するためには血中乳酸測定器が使われます。
+		しかしこの血中乳酸測定器、定価６５０００円と非常に高額。
+		そこで心拍数の出番です。
+		運動すると心拍数は上がります。運動を停止すると、当然心拍数は下がります。
+		例えば８００ｍ走を少しずつ速度を挙げて何本か走り、心拍数がどれくらいの時間で平常時に落ちるか計測します。
+		最初はスーッと下がっていた心拍数が、ある強度で中々落ちなくなってきます。
+		ということは、この辺りで、乳酸が出始め、処理のために時間がかかっているということになります。
+		ここがＬＴの強度なのかと推測できるのです。
+		
+		
+
+</body>
+
+
+
+</html>

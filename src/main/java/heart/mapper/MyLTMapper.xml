@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="heart.mapper.MyLTMapper">
 	<select id="findLT" resultType="heart.model.HeartRate">
-		SELECT "LT_HeartRate", "CURRENT DATE"
+		SELECT "LT_HeartRate"."LTHeartRate", "CURRENT DATE"
 		FROM "LT_HeartRate"
 		WHERE "LT_HeartRate"."id" = #{id,jdbcType=VARCHAR}
 	</select>

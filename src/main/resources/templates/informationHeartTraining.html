@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Example</title>
+<!--	 top.css を適用 -->
+	<link rel="stylesheet" href="./entry2.css">
+</head>
+
+<body>
+	<div class="menu">
+		<div class="title">MENU</div>
+		<ul class="nav">
+			<li><a th:href="@{/myLT}">YOUR LT PROPERTY</a></li>
+			<li><a th:href="@{/entry2}"> TUTORIAL</a></li>
+			<li><a th:href="@{/max_heart_rate}">MEASUREMENT</a></li>
+			<li><a th:href="@{/colum}">COLUM</a></li>
+		</ul>
+	</div>
+
+
+
+	<div class="information">
+		心拍数トレーニングとはその名の通り心拍数を用いて体力測定をするトレーニング方法です。
+		<br>
+		通常、バスケットやボクシング等でスタミナトレーニングをする際ランニングなど走ることによる
+		トレーニングが一般的です。
+		<br>
+		しかし、そのようなトレーニングはあくまで「走る」ことによるスタミナしか
+		つけることが出来ず、試合の動きのなかでのスタミナを計測することはできません。
+		<br>
+		また、練習の中でどれだけ追い込んだか、どれくらいの強度で練習できたか等は個人の主観に頼ることが非常に多いのでは
+		ないでしょうか。
+		<br>心拍数トレーニングとは上記のような課題を「心拍数」という客観的なデータをもとに解決を試みたのトレーニング方法です。
+		
+</body>
+
+</html>

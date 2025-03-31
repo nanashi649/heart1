@@ -23,6 +23,7 @@
 
 
 	<!-- LT値を表示 -->
+
 	<div class="history">
 		<h2>LT値</h2>
 		<table border="1">
@@ -32,12 +33,15 @@
 					<th>LT値</th>
 				</tr>
 			</thead>
-			<tbody th:if="${ltList != null and !#lists.isEmpty(ltList)}">
+			<tbody th:if="${ltList != null and not #lists.isEmpty(ltList)}">
 			    <tr th:each="lt : ${ltList}">
-			        <td th:text="${lt.currentDate}"></td>
-			        <td th:text="${lt.LTHeartRate}"></td>
+			        <td th:text="${lt?.currentDate != null ? lt.currentDate : 'データなし'}"></td>
+			        <td th:text="${lt?.LTHeartRate != null ? lt.LTHeartRate : 'データなし'}"></td>
 			    </tr>
 			</tbody>
+
+		
+
 
 
 	</div>

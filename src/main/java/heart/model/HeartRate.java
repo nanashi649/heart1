@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class HeartRate {
 	//id
-	private String Id;
+	private String id;
 	//LT心拍数
 	private int LTHeartRate;
 	//最大心拍数
