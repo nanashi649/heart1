@@ -1,2 +1,8 @@
 rootProject.name = 'heart1'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral() 
+    }
+}
 
