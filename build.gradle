@@ -47,7 +47,7 @@ dependencies {
      testImplementation 'org.springframework.security:spring-security-test'
       //Thymeleafテスト
       testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.thymeleaf:thymeleaf-testing:3.0.12.RELEASE'
+//    testImplementation 'org.thymeleaf:thymeleaf-testing:3.0.12.RELEASE'
 }
 
 tasks.named('test') {
