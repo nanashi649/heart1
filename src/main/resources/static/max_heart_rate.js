@@ -84,7 +84,7 @@ function updateChart() {
 		};
 
 		// 既存の2区間移動平均データセットを削除し、新しいものを追加
-		window.mychart.data.datasets = window.mychart.data.datasets.filter(ds => ds.label !== '2区間移動平均');
+		window.mychart.data.datasets = window.mychart.data.datasets.filter(ds => ds.label !== '移動平均');
 		window.mychart.data.datasets.push(twoPeriodMovingAverageDataset);
 
 		window.mychart.update();

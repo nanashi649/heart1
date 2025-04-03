@@ -64,38 +64,44 @@
 	<section id="modal7" class="page">
 		<p>最大心拍数が計測できましたか？それでは画像のように入力してみましょう</p>
 		<!-- 画像を入れる -->
-
+	
 		<img src="/image/screenshot-2024-12-17.png" alt="スクリーンショット">
+		<br>
 		<button onclick="showPage('modal6')" id="back6">戻る</button>
 		<button onclick="showPage('modal8')" id="open8">進む</button>
 	</section>
 
 	<section id="modal8" class="page">
 		<p>次は「LT値」の計測です！<br>
-			「最大心拍数」を入力したことであなたの「ゾーン」が判明しました<br>
-			「ゾーン」とはあなたのトレーニング強度を測る心拍数の値になります。</p>
+			「最大心拍数」を入力したことであなたの<strong>「指定心拍数」</strong>が判明しました<br>
+			「指定心拍数」とはあなたのトレーニング強度を測るための基準の値になります。</p>
 		<button onclick="showPage('modal7')" id="back7">戻る</button>
 		<button onclick="showPage('modal9')" id="open9">進む</button>
 	</section>
 
 	<section id="modal9" class="page">
-		<p>「LT値」とはこの「ゾーン」から平常時の心拍数といわれている「最大心拍数の５３％」に戻るまでどれくらいの時間がかかるかで計測します。。
+		<p>「LT値」とはこの「指定心拍数」から平常時の心拍数といわれている
+			<br><strong>「最大心拍数の５３％」</strong>に戻るまでどれくらいの時間がかかるかで計測します。
 			<br>apple watchなど心拍数を計測できる物を用いて計測してみましょう！
-			ゾーンへの心拍数へ持っていく方法はどんな方法でも構いません
+			この「指定心拍数」への持って行く方法は走ってもいいですし、普おこなっている運動でもっていっても大丈夫です。
 		</p>
 		<button onclick="showPage('modal8')" id="back8">戻る</button>
 		<button onclick="showPage('modal10')" id="open10">進む</button>
 	</section>
 
 	<section id="modal10" class="page">
-		<p>時間の入力したら画像のようにグラフが自動で生成されます<br>
-			グラフの折れ曲がっている部分、傾きが急になっている部分があなたの「LT値」です！</p>
-		<button onclick="showPage('modal9')" id="back9">戻る</button>
+		<p><strong>「指定心拍数」</strong>から<strong>「最大心拍数の５３％」</strong>に戻るまでの時間の入力したら画像のようにグラフが自動で生成されます<br>
+			グラフの折れ曲がっている部分、傾きが急になっている部分があなたの<strong>「LT値」</strong>です！</p>
+			
+			<img  src="/image/ltMesurement3.png" alt = "スクリーンショット" width="300">
+			<img  src="/image/ltMesurement4.png" alt = "スクリーンショット" width="300">
+			<br>
+			<button onclick="showPage('modal9')" id="back9">戻る</button>
 		<button onclick="showPage('modal11')" id="open11">進む</button>
 	</section>
 
 	<section id="modal11" class="page">
-		<p>それではあなたの「LT値」を入力してみましょう<br>
+		<p>
 			この「LT値」を伸ばすことがあなたがスタミナをつけることにつながります。</p>
 		<button onclick="showPage('modal10')" id="back10">戻る</button>
 		<button onclick="showPage('modal12')" id="open12">進む</button>
